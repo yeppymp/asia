@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,500,700);
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(Quicksand.min.css);
+@import url(Pacifico.min.css);
 a {
   text-decoration: none;
   font-size: 16px;
@@ -13,6 +13,27 @@ a {
   color: white;
   border: none;
   width: 100%; }
+
+.alert {
+  background-color: #1ebc61;
+  position: absolute;
+  text-align: center;
+  font-weight: 400;
+  z-index: 9999;
+  color: #fff; }
+  .alert span {
+    font-weight: bold; }
+
+.alert.alert-red {
+  background-color: #E74C3C; }
+
+::-moz-selection {
+  background: #22A7F0;
+  color: #fff; }
+
+::selection {
+  background: #22A7F0;
+  color: #fff; }
 
 body {
   font-family: 'Quicksand', sans-serif; }
@@ -48,6 +69,8 @@ body {
       @media (max-width: 768px) {
         body .navbar-custom .collapse .close-toggle {
           display: inherit; } }
+  body .alert {
+    margin-left: 40%; }
   body .page {
     height: 100%;
     width: 80%; }
@@ -143,5 +166,49 @@ body {
     color: #fff;
     width: 100%;
     bottom: 0; }
+
+.admin #member {
+  margin: 2.5% 0 0 10%;
+  overflow-y: auto;
+  height: 475px;
+  width: 80%; }
+  .admin #member img {
+    position: fixed;
+    width: 80%; }
+  @media (max-width: 1356px) {
+    .admin #member img {
+      display: none; } }
+  .admin #member .alert {
+    margin-left: 32.5%; }
+  .admin #member .table-custom {
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-spacing: 0;
+    width: 100%; }
+    .admin #member .table-custom thead tr td,
+    .admin #member .table-custom thead tr th,
+    .admin #member .table-custom tbody tr td,
+    .admin #member .table-custom tbody tr th {
+      text-align: center;
+      padding: 10px 20px; }
+      .admin #member .table-custom thead tr td a,
+      .admin #member .table-custom thead tr th a,
+      .admin #member .table-custom tbody tr td a,
+      .admin #member .table-custom tbody tr th a {
+        color: red; }
+    .admin #member .table-custom thead {
+      border-bottom: 2px solid #bfc4d7; }
+    .admin #member .table-custom tbody tr:nth-child(odd) {
+      background-color: rgba(236, 240, 241, 0.5); }
+.admin .modal {
+  margin-top: 15%; }
+  .admin .modal .modal-dialog {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    width: 30%; }
+    .admin .modal .modal-dialog .btn {
+      margin: 15px 25px 0 25px; }
 
 /*# sourceMappingURL=style.css.map */

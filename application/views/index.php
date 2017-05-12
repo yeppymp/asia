@@ -37,7 +37,18 @@
 			</div>
 		</div>
 	</nav>
-	
+	<?php if ($this->session->flashdata('gagal')): ?>
+		<div class="alert alert-red animated bounceInDown">
+			<span>Maaf,</span>
+			<?=$this->session->flashdata('gagal')?>
+		</div>
+	<?php endif ?>
+	<?php if ($this->session->flashdata('success')): ?>
+		<div class="alert animated bounceInDown">
+			<span>Sukses!</span>
+			<?=$this->session->flashdata('success')?>
+		</div>
+	<?php endif ?>
 	<div class="page container">
 		<!-- load with jQuery -->
 	</div>
@@ -50,21 +61,24 @@
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('.page').load('assets/content/loading.html');
-			setTimeout(function() {
-				$('.page').load('assets/content/beranda.html');
-			}, 2000);
+
+			setTimeout(function(){
+				$('.alert').fadeOut();
+			},3000);
+
+			$('.page').load('assets/content/beranda.php');
+			
 			$('#beranda, #brand').click(function(){
-				$('.page').load('assets/content/beranda.html');
+				$('.page').load('assets/content/beranda.php');
 			});
 
 			$('#buat-kartu').click(function(){
 				$('.page').load('assets/content/loading.html');
 				setTimeout(function(){
-					$('.page').load('assets/content/buat-kartu.html');
+					$('.page').load('assets/content/buat-kartu.php');
 				}, 1000);
 				$(this).click(function(){
-					$('.page').load('assets/content/buat-kartu.html');
+					$('.page').load('assets/content/buat-kartu.php');
 				});
 			});
 
