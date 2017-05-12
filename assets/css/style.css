@@ -172,17 +172,10 @@ body {
   overflow-y: auto;
   height: 475px;
   width: 80%; }
-  .admin #member img {
-    position: fixed;
-    width: 80%; }
-  @media (max-width: 1356px) {
-    .admin #member img {
-      display: none; } }
   .admin #member .alert {
     margin-left: 32.5%; }
   .admin #member .table-custom {
     border-collapse: collapse;
-    margin-top: 20px;
     border-spacing: 0;
     width: 100%; }
     .admin #member .table-custom thead tr td,

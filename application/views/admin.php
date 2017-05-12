@@ -37,7 +37,6 @@
 				<?php echo $this->session->flashdata('success') ?>
 			</div>
 		<?php endif ?>
-		<img src="assets/img/thead.png" alt="">
 		<table class="table-custom">
 			<thead id="thead">
 				<tr>

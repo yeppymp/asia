@@ -275,16 +275,6 @@ body{
 		overflow-y: auto;
 		height: 475px;
 		width: 80%;
-
-		img{
-			position: fixed;
-			width: 80%;
-		}
-		@media (max-width: 1356px){
-			img{
-				display: none;
-			}
-		}
 		
 		.alert{
 			margin-left: 32.5%;
@@ -292,7 +282,6 @@ body{
 
 		.table-custom{
 			border-collapse: collapse;
-			margin-top: 20px;
 			border-spacing: 0;
 			width: 100%;
 
